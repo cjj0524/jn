@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>王学奇&曹佳佳</title>
+<link rel="icon" type="text/css" href="images/image.JPG">
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+	 <!-- background music  -->
+			<audio loop autoplay>
+				<source src="music/music.mp3" type="audio/mp3">
+			</audio>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments1"> ❤❤❤❤</span><br />
+			<span class="space"/><span class="comments">2017—10-19,</span><br />
+			<span class="space"/><span class="comments">我们在一起了</span><br />
+			<span class="space"/><span class="comments1">❤❤❤❤</span><br />
+			<span class="aa">Boy name = Mr王学奇</span><br />
+			<span class="bb">Girl name = Mrs曹佳佳</span><br />
+			<span class="comments2"><br />
+			佳佳，你知道吗，在对的时间能遇到一个对的人，<br/>人这一辈子没有几次这样的机会。我现在遇到的那个人就是你，<br/>希望你能给我一次机会让我好好爱你。
+            <br/></span><br/>
+			<span class="comments3">以后的日子你不开心的时候，我陪你，<br/>你哭泣的时候，我陪你，<br/>你心情很不爽的时候，我陪你，<br/>你不想回家的时候，我陪你，<br/>无论怎样，我都陪你，只因为你是我最爱的人。<br/>
+            </span><br />
+			<br />
+			<span class="comments4">
+				我知道我有时候，老惹你不开心，惹你生气，<br/>还说一些你不爱听的话，你也知道我这个人比较傻，比较笨，<br/>希望老婆大人你大人有大量，不要往心里去，<br/>以后我会听老婆你的话。嘻嘻  爱你 么么哒！！！<br/>
+			</span><br/><br/>
+			<span class="comments5">
+				 最浪漫是与你相牵，最暖心是有你相伴，<br/>最想见是你的笑脸，最难忘是你的容颜。<br/>没有你的我就像迷失了航线，此生请让我与你相伴永远。
+
+			</span><br /><br/>
+			<span class="comments6">曹 佳 佳 永 远 是 我 的 小 公 主</span><br />
+			<span class=""></span><br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+				  <div class="messages1">
+				  	佳佳,这是我们在一起的时光<br/>
+					以后的日子也要一起走下去
+				  </div>
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					王学奇LOVE曹佳佳<br/>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2017 , 9, 19);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
